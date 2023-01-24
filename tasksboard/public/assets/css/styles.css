@@ -1,0 +1,266 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --grey: #6b7280;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --light: #eee;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira sans", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #fff;
+  background-color: var(--dark);
+}
+
+header {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--grey);
+  padding-top: 40px;
+}
+
+#new-task-form {
+  display: flex;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-task-input {
+  background-color: var(--darker);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: var(--light);
+  font-size: 1.25rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+}
+
+#new-task-input::placeholder {
+  color: var(--grey);
+}
+
+#new-task-submit {
+  color: var(--pink);
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#new-task-submit:hover {
+  opacity: 0.8;
+}
+
+#new-task-submit:active {
+  opacity: 0.6;
+}
+
+main {
+  flex: 1 1 0%;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task-list {
+  padding: 1rem;
+}
+
+.task-list h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--grey);
+  margin-bottom: 1rem;
+}
+
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darkest);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* .datecontainer {
+  width: 150px;
+  background-color: var(--darkest);
+  padding: 1px;
+} */
+.date {
+  color: white;
+  cursor: text;
+  width: 150px;
+  background-color: var(--darkest);
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 1px;
+}
+
+.date {
+  -webkit-appearance: none;
+}
+.date::-webkit-inner-spin-button,
+.date::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.task .content {
+  flex: 1 1 0%;
+}
+
+.task .content .text {
+  color: var(--light);
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+  color: var(--pink);
+}
+
+.task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.task .actions button:hover {
+  opacity: 0.8;
+}
+
+.task .actions button:active {
+  opacity: 0.6;
+}
+
+.task .actions .edit {
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+  color: crimson;
+}
+
+.container {
+  max-width: 100%;
+}
+#tasks {
+  text-align: center;
+}
+
+.textbox {
+  width: 200px;
+  height: 39px;
+  font-size: 10px;
+  resize: none;
+  background-color: var(--darkest);
+  border: none;
+  color: var(--light);
+  font-size: 1.25rem;
+  /* line-height: 30px; */
+}
+
+.textbox:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.textbox::-webkit-scrollbar {
+  width: 0px;
+}
+
+.drag {
+  background-color: #8b5cf6;
+  cursor: default;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.arrow {
+  height: 25px;
+  opacity: 0.6;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  padding-top: 7px;
+  background-color: var(--dark);
+}
+
+#navbarNav ul li a {
+  color: rgb(255, 255, 255);
+}
+
+.container-fluid a {
+  color: rgb(190, 160, 160);
+  font-size: large;
+}
+
+#navbarNav ul li a:hover {
+  background-color: rgb(252, 237, 237);
+  border-radius: 20px;
+  color: black;
+}
+
+.text {
+  color: white;
+}
+
+.text:hover {
+  color: black;
+}
+
+.stats {
+  display: inline-block;
+}
